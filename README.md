@@ -1,20 +1,41 @@
 # APP_CDC_01
 
-Aplicativo mobile desenvolvido com React Native e Expo para apresentar uma interface simples com cabeçalho, área de conteúdo e rodapé.
+Aplicativo mobile desenvolvido com React Native e Expo como atividade prática da disciplina de Fundamentos II.
 
 ## Objetivo
 
-Este projeto foi criado como atividade prática da disciplina de Fundamentos II, com foco em:
+O projeto foi criado para praticar:
 
-- organização de componentes visuais no React Native
-- uso de `View`, `Text` e `Image`
-- separação de estilos em arquivo externo com `StyleSheet`
+- construção de interfaces no React Native
+- uso de `View`, `Text`, `Image`, `ScrollView` e `SafeAreaView`
+- organização de estilos em arquivos separados
+- exibição dinâmica de uma lista de países
 
 ## Tecnologias utilizadas
 
 - React
 - React Native
 - Expo
+
+## Funcionalidades da tela
+
+A aplicação apresenta:
+
+- cabeçalho com o título `FUNDAMENTOS II`
+- imagem central ilustrativa
+- subtítulo `DSV MOBILE`
+- faixa decorativa amarela
+- lista de países com nome e capital
+- rodapé com autor e data
+
+## Países exibidos
+
+- Japão — Tóquio
+- Portugal — Lisboa
+- Itália — Roma
+- Alemanha — Berlim
+- Egito — Cairo
+- Síria — Damasco
 
 ## Estrutura do projeto
 
@@ -24,19 +45,34 @@ APP_CDC_01/
 |-- index.js
 |-- app.json
 |-- package.json
+|-- README.md
 |-- assets/
 `-- src/
     `-- styleSheet/
-        `-- estilo.js
+        |-- cabecalho.js
+        |-- container.js
+        |-- conteudo.js
+        |-- estilo.js
+        `-- rodape.js
 ```
+
+## Organização dos estilos
+
+Os estilos foram separados por responsabilidade:
+
+- [container.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/container.js): estrutura principal da tela
+- [cabecalho.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/cabecalho.js): estilos do topo da aplicação
+- [conteudo.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/conteudo.js): estilos da lista de países
+- [rodape.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/rodape.js): estilos do rodapé
+- [estilo.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/estilo.js): arquivo que centraliza e exporta todos os estilos
 
 ## Arquivos principais
 
 - [App.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/App.js): componente principal da aplicação
-- [src/styleSheet/estilo.js](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/src/styleSheet/estilo.js): estilos da interface
-- [package.json](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/package.json): dependências e scripts do projeto
+- [package.json](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/package.json): scripts e dependências do projeto
+- [app.json](C:/Users/Lab%20311/Desktop/VINICIUS%20ADS-5A/app10.04.2026/APP_CDC_01/app.json): configurações do Expo
 
-## Como executar
+## Como executar o projeto
 
 1. Instale as dependências:
 
@@ -44,35 +80,25 @@ APP_CDC_01/
 npm install
 ```
 
-2. Inicie o projeto:
+2. Inicie a aplicação:
 
 ```bash
 npm start
 ```
 
-3. Depois disso, escolha uma das opções no terminal do Expo:
+3. No Expo, escolha uma forma de execução:
 
 - `a` para abrir no Android
 - `w` para abrir no navegador
-- usar o aplicativo Expo Go para testar no celular
+- Expo Go para testar no celular
 
 ## Scripts disponíveis
 
-- `npm start`: inicia o servidor Expo
-- `npm run android`: abre o projeto no Android
-- `npm run ios`: abre o projeto no iOS
-- `npm run web`: abre o projeto na web
-
-## Interface atual
-
-A aplicação apresenta:
-
-- um cabeçalho com o título `FUNDAMENTOS II`
-- uma imagem central ilustrativa
-- o texto `DSV MOBILE`
-- uma área destinada ao conteúdo
-- um rodapé com autor e data
+- `npm start`: inicia o projeto com Expo
+- `npm run android`: abre no Android
+- `npm run ios`: abre no iOS
+- `npm run web`: abre na web
 
 ## Autor
 
-- Luiz Fernando Corcini
+- Vinicius Cerqueira Silva
